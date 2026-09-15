@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- net48：SerialPort 位于 BCL（System.dll）中，无需任何 NuGet 依赖，可离线编译 -->
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <RootNamespace>SerialPortDemo</RootNamespace>
+    <AssemblyName>SerialPortDemo.Core</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- 仅用于通过 WMI 识别 USB 转串口设备（Win32_PnPEntity） -->
+    <Reference Include="System.Management" />
+  </ItemGroup>
+
+</Project>
